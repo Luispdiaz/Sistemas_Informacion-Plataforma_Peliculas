@@ -3,6 +3,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Login from './app/modules/login/login'
 import Header from './app/modules/header/header'
+import InicioSesion from './app/modules/registro/inicioSesion'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Login />} />
+        <Route path='/login' element={<InicioSesion />} />
       </Routes>
     </div>
   )
