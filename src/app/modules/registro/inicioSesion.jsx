@@ -20,7 +20,7 @@ export default function InicioSesion() {
 
     return (
         <React.Fragment>
-            <div className='flex justify-center mt-48'>
+            <div className='flex justify-center mt-28'>
                 <div className='border border-slate100 bg-slate100 px-32 z-10 my-12 relative'>
                     <h2 className="text-6xl font-bold mt-6">Iniciar sesión</h2>
                     <p className="text-gris font-bold mb-10 mt-4">Introduce tus datos para Iniciar sesión.</p>
