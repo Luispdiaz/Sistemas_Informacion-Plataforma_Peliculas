@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import "./login.css"
 
+
 export default function Login() {
     const [formData, setFormData] = useState({
         nombre: '',
@@ -16,11 +17,17 @@ export default function Login() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Aquí se puede enviar el formulario a través de una API o por donde lo vayamos a enviar. Mientras solo nos imprime el formulario en consola.
-        console.log(formData);
+
+        try {
+            await db.collection('usuarios').add(formData);
+            console.log('Formulario enviado correctamente');
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+        }
     };
+
 
     const handleSingWithGoogle = async () => {
         await signInWithGoogle()
@@ -106,18 +113,18 @@ export default function Login() {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 className="border border-gris500 py-2 px-3 rounded-lg focus:outline-none focus:border-getWellColor"
-                                required 
+                                required
                                 placeholder="Ingresa tu correo electronico"
                             />
                         </div>
                         <div className='flex items-center justify-center'>
-                        <NavLink to={'/login'} type="submit" className="bg-getWellColor text-white font-bold mt-2 py-2 px-14 rounded-lg shadow-lg shadow-[#008b8b7e] hover:bg-[#008b8b7e]">
-                            Registrarse
-                        </NavLink>
+                            <NavLink to={'/login'} type="submit" className="bg-getWellColor text-white font-bold mt-2 py-2 px-14 rounded-lg shadow-lg shadow-[#008b8b7e] hover:bg-[#008b8b7e]">
+                                Registrarse
+                            </NavLink>
                         </div>
                     </form>
                 </div>
-                <div className='flex justify-center items-center z-10 mt-28'><img src="src\assets\registro1.png" alt="Imagen de registro"/></div>
+                <div className='flex justify-center items-center z-10 mt-28'><img src="src\assets\registro1.png" alt="Imagen de registro" /></div>
             </div>
         </React.Fragment>
     );
