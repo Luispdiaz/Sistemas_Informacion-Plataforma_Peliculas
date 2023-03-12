@@ -25,11 +25,11 @@ setMovies(results)
 setMovie(results[0]) 
 }
 
- 
+
     useEffect(()=>{
     fetchMovies()
 })
-   
+
     return (
         <React.Fragment>
             <div>
