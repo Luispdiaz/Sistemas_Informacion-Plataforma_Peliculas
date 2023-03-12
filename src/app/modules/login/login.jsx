@@ -124,7 +124,7 @@ export default function Login() {
                         </div>
                     </form>
                 </div>
-                <div className='flex justify-center items-center z-10 mt-28'><img src="src\assets\registro1.png" alt="Imagen de registro" /></div>
+                <div className='w-1/4 flex justify-center items-center ml-16'><img src='src\assets\registro1.png' alt="Imagen de fondo." /></div>
             </div>
         </React.Fragment>
     );
