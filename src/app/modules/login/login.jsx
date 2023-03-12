@@ -28,7 +28,7 @@ export default function Login() {
 
     return (
         <React.Fragment>
-            <div className='flex justify-evenly relative h-full'>
+            <div className='flex justify-center relative h-full'>
                 <div className="flex flex-col items-center ml-44">
                     <h2 className="text-6xl font-bold mb-4 mt-32">Registrate</h2>
                     <p className="text-gris font-bold mb-10">Completa el formulario para completar tu cuenta</p>

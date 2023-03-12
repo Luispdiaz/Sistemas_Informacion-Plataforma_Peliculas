@@ -41,7 +41,7 @@ export default function Header() {
                     <h2>Movies</h2>
                 </div>
                 <div className='w-full flex justify-evenly'>
-                    <NavLink className={'border p-2 rounded-lg bg-blue500 text-white'} to={'/'}>Iniciar Sesion</NavLink>
+                    <NavLink className={'border p-2 rounded-lg bg-blue500 text-white'} to={'/login'}>Iniciar Sesion</NavLink>
                     <NavLink className={'border p-2 rounded-lg bg-blue500 text-white '} to={'/'}>Registrate</NavLink>
                 </div>
             </div>
