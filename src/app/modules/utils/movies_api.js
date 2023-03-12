@@ -20,6 +20,6 @@ export const fetchMovies = async(buscarKey) =>{
     },
 });
 }
-
+ 
 setMovies(results)
 setMovie(results[0])  
