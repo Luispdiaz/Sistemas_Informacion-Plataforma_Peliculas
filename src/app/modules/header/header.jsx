@@ -40,8 +40,8 @@ export default function Header() {
                     <img className='w-1/5' src="src\assets\undraw_netflix_q00o.png" alt="Image 1"/>
                     <h2>Movies</h2>
                 </div>
-                <div className='w-full flex justify-evenly'>
-                    <NavLink className={'border p-2 rounded-lg bg-blue500 text-white'} to={'/login'}>Iniciar Sesion</NavLink>
+                <div className='w-full flex justify-end mr-32'>
+                    <NavLink className={'border p-2 rounded-lg bg-blue500 text-white mr-10'} to={'/login'}>Iniciar Sesion</NavLink>
                     <NavLink className={'border p-2 rounded-lg bg-blue500 text-white '} to={'/'}>Registrate</NavLink>
                 </div>
             </div>
