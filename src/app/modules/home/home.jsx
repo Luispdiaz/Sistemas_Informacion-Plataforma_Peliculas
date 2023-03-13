@@ -65,7 +65,7 @@ export default function Home() {
                     <div className="font-black text-white text-3xl mb-5 flex flex-col items-center">
                         <h1 className=''>{movie.title}</h1>
                         {movie.overview ? (
-                            <p className="">{movie.overview} {movie.budget} {movie.budget} {movie.original_language} {movie.status} { }</p>
+                            <p className="">{movie.overview} <br/>Lenguaje original: {movie.original_language} <br/>Presupuesto: {movie.budget} <br/>Popularidad: {movie.popularity} <br/>Fecha de Lanzamiento: {movie.release_date}<br/>Estado: {movie.status}</p>
                         ) : null}
                     </div>
                 </div>
